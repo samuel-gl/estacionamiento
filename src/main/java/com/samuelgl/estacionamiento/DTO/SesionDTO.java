@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import java.time.LocalDateTime;
 import java.util.Calendar;
 
@@ -15,6 +17,7 @@ import java.util.Calendar;
 public class SesionDTO {
 
     private String placa;
+    @Enumerated(EnumType.STRING)
     private Vehiculo tipo;
     private Double pagoActual;
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")

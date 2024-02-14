@@ -19,6 +19,7 @@ public class Sesion {
 
     private Boolean esActiva;
     private String placa;
+    @Enumerated(EnumType.STRING)
     private Vehiculo tipo;
     private Double pagoActual;
 

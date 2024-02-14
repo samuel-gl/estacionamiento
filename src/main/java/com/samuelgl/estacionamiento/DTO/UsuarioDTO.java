@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
 
 @Getter
@@ -15,5 +17,6 @@ public class UsuarioDTO {
     private String nombreUsuario;
     @ManyToOne
     private Estacionamiento estacionamiento;
+    @Enumerated(EnumType.STRING)
     private Rol rol;
 }
